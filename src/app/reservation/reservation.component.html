@@ -1,1 +1,29 @@
-<p>reservation works!</p>
+<div>
+    <h1>Ajouter une réservation</h1>
+    <form (ngSubmit)="saveReservation()">
+        <table>
+            <tr>
+                <td>Date</td>
+                <td><input type="text" [(ngModel)]="user.dateResa" name="dateResa"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button>Ajouter</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td>Date</td>
+            <td>Action</td>
+        </tr>
+        <tr *ngFor="let r of users">
+            <td>{{r.dateResa}}</td>
+            <td><button (click)="deleteReservation(r.idReservation)">Delete</button></td>
+        </tr>
+    </table>
+
+</div>
+

@@ -1,1 +1,52 @@
-<p>utilisateur works!</p>
+<div>
+    <h1>Ajouter un utilisateur</h1>
+    <form (ngSubmit)="saveUtilisateur()">
+        <table>
+            <tr>
+                <td>Nom</td>
+                <td><input type="text" [(ngModel)]="user.nomUtilisateur" name="nomUtilisateur"/></td>
+            </tr>
+            <tr>
+                <td>Prénom</td>
+                <td><input type="text" [(ngModel)]="user.prenomUtilisateur" name="prenomUtilisateur"/></td>
+            </tr>
+            <tr>
+                <td>Date de naissance</td>
+                <td> <input type="date" [(ngModel)]="user.dateNaissance" name="dateNaissance"/></td>
+            </tr>
+            <tr>
+                <td>Login</td>
+                <td><input type="text" [(ngModel)]="user.login" name="login"/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" [(ngModel)]="user.password" name="password"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button>Ajouter</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td>Nom</td>
+            <td>Prénom</td>
+            <td>Date de Naissance</td>
+            <td>Login</td>
+            <td>Password</td>
+            <td>Action</td>
+        </tr>
+        <tr *ngFor="let u of users">
+            <td>{{u.nomUtilisateur}}</td>
+            <td>{{u.prenomUtilisateur}}</td>
+            <td>{{u.dateNaissance}}</td>
+            <td>{{u.login}}</td>
+            <td>{{u.password}}</td>
+            <td><button (click)="deleteUtilisateur(u.idUtilisateur)">Delete</button></td>
+        </tr>
+    </table>
+
+</div>

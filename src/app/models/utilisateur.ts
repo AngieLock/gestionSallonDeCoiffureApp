@@ -4,7 +4,8 @@ export class Utilisateur {
     idUtilisateur!:number;
     nomUtilisateur!:string;
     prenomUtilisateur!:string;
-    username!:string;
+    login!:string;
     password!:string;
+    dateNaissance!:Date;
     roles!:Role[];
 }
