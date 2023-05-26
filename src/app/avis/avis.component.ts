@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AvisService } from '../services/avis.service';
 
 @Component({
   selector: 'app-avis',
@@ -9,21 +10,19 @@ export class AvisComponent implements OnInit{
 
   avisS!:any[];
   avis:Avis=new Avis(); 
-  // DI : par constructeur  
   constructor(private avisService:AvisService){
   }
   ngOnInit(): void {
-    this.findAllAvis();
+    this.findAllAvisS();
   }
-  findAllUtilisateurs(){
-    // utilisation expression lambda 
-    // data sont les données qui sont dans le cache du navigateur
+  findAllAvisS(){
+
     this.avisService.findAll().subscribe(data => {this.avisS = data});
   }
   saveAvis(){
     this.avisService.save(this.avis).subscribe(
       () => {
-        this.findAllAvis();
+        this.findAllAvisS();
         this.avis = new Avis();
       }
     )
@@ -31,7 +30,7 @@ export class AvisComponent implements OnInit{
   deleteAvis(id:number){
     this.avisService.delete(id).subscribe(
       () => {
-        this.findAllAvis();
+        this.findAllAvisS();
       }
     )
   }
