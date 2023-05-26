@@ -6,6 +6,13 @@ import { AppComponent } from './app.component';
 import { MyDirectiveDirective } from './directives/my-directive.directive';
 import { SqrtPipe } from './pipes/sqrt.pipe';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { RoleComponent } from './role/role.component';
+import { AvisComponent } from './avis/avis.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { PrestationComponent } from './prestation/prestation.component';
+import { SalonComponent } from './salon/salon.component';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +20,12 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
     UtilisateurComponent,
     MyDirectiveDirective,
     SqrtPipe,
-    UtilisateurComponent
+    UtilisateurComponent,
+    RoleComponent,
+    AvisComponent,
+    ReservationComponent,
+    PrestationComponent,
+    SalonComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +33,7 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
     FormsModule,
     HttpClientModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
