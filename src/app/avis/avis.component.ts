@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AvisService } from '../services/avis.service';
+import { Avis } from '../models/avis';
 
 @Component({
   selector: 'app-avis',
