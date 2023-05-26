@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { RoleComponent } from './role/role.component';
 import { AvisComponent } from './avis/avis.component';
 import { ReservationComponent } from './reservation/reservation.component';
@@ -12,11 +11,11 @@ import { SalonComponent } from './salon/salon.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgSwitch } from '@angular/common';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UtilisateurComponent,
     UtilisateurComponent,
     RoleComponent,
     AvisComponent,
