@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReservationService } from '../services/reservation.service';
+import { Reservation } from '../models/reservation';
 
 @Component({
   selector: 'app-reservation',
