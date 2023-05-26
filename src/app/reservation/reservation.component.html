@@ -19,7 +19,7 @@
             <td>Date</td>
             <td>Action</td>
         </tr>
-        <tr *ngFor="let r of users">
+        <tr *ngFor="let r of reservations">
             <td>{{r.dateResa}}</td>
             <td><button (click)="deleteReservation(r.idReservation)">Delete</button></td>
         </tr>
