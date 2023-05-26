@@ -1,3 +1,5 @@
+import { Role } from "./role";
+
 export class Utilisateur {
     idUtilisateur!:number;
     nomUtilisateur!:string;

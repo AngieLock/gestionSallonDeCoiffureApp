@@ -1,3 +1,5 @@
+import { Prestation } from "./prestation";
+import { Salon } from "./salon";
 import { Utilisateur } from "./utilisateur";
 
 export class Reservation {
