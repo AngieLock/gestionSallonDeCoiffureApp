@@ -1,10 +1,20 @@
-<div>
+<div class="container">
+    <div class="left">
+        <div class="utilisateur-container">
     <h1>Ajouter une réservation</h1>
     <form (ngSubmit)="saveReservation()">
         <table>
             <tr>
                 <td>Date</td>
-                <td><input type="text" [(ngModel)]="user.dateResa" name="dateResa"/></td>
+                <td><input type="date" [(ngModel)]="user.dateResa" name="dateResa"/></td>
+            </tr>
+            <tr>
+                <td>Salon</td>
+                <td><input type="text" [(ngModel)]="user.salons" name="salons"/></td>
+            </tr>
+            <tr>
+                <td>Utilisateur</td>
+                <td><input type="text" [(ngModel)]="user.idUtilisateur" name="idUtilisateur"/></td>
             </tr>
             <tr>
                 <td colspan="2"><button>Ajouter</button></td>
@@ -12,18 +22,25 @@
         </table>
     </form>
 </div>
+</div>
 
-<div>
+<div class="right">
+    <div class="utilisateur-table">
     <table>
         <tr>
             <td>Date</td>
+            <td>Utilisateur</td>
+            <td>Salon</td>
             <td>Action</td>
         </tr>
         <tr *ngFor="let r of reservations">
-            <td>{{r.dateResa}}</td>
+            <td>{{ r.dateResa }}</td>
+            <td>{{ r.idUtilisateur.nomUtilisateur }} {{ r.idUtilisateur.prenomUtilisateur }}</td>
+            <td>{{ r.salons[0].nomSalon }}</td>
             <td><button (click)="deleteReservation(r.idReservation)">Delete</button></td>
-        </tr>
+         </tr>
     </table>
-
+</div>
+</div>
 </div>
 
