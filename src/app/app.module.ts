@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgSwitch } from '@angular/common';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { UtilisateurService } from './services/utilisateur.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
     HttpClientModule
   ],
   
-  providers: [],
+  providers: [UtilisateurService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
