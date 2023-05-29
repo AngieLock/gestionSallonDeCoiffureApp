@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AvisService } from '../services/avis.service';
 import { Avis } from '../models/avis';
+import { Utilisateur } from '../models/utilisateur';
 
 @Component({
   selector: 'app-avis',
@@ -11,6 +12,7 @@ export class AvisComponent implements OnInit{
 
   avisS!:any[];
   avis:Avis=new Avis(); 
+  utilisateurs: Utilisateur[] = [];
   constructor(private avisService:AvisService){
   }
   ngOnInit(): void {

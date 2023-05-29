@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+  }
+  
+  .left {
+    flex: 1;
+    margin-right: 20px;
+    border: 1px solid blue;
+    padding: 20px;
+  }
+  .left h1 {
+    color: blue;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .left button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  .right {
+    flex: 1;
+    border: 1px solid blue;
+    padding: 20px;
+  }
+  
+  .utilisateur-table {
+    overflow: auto;
+  }
+  
+  .utilisateur-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .utilisateur-table th,
+  .utilisateur-table td {
+    border: 1px solid blue;
+    padding: 8px;
+  }

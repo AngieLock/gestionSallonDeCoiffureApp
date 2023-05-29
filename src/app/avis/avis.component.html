@@ -1,10 +1,16 @@
-<div>
+<div class="container">
+    <div class="left">
+        <div class="utilisateur-container">
     <h1>Ajouter Avis</h1>
     <form>
         <table>
             <tr>
                 <td>Titre</td>
                 <td><input type="text" [(ngModel)]="avis.titre" name="titre"/></td>
+            </tr>
+            <tr>
+                <td>Utilisateur</td>
+                <td><input type="text" [(ngModel)]="avis.idUtilisateur" name="idUtilisateur"/></td>
             </tr>
             <tr>
                 <td>Description</td>
@@ -15,19 +21,25 @@
             </tr>
         </table>
     </form>
+    </div>
 </div>
-<div>
+<div class="right">
+    <div class="utilisateur-table">
     <table>
         <tr>
             <td>Numéro avis</td>
             <td>Titre</td>
+            <td>Utilisateur</td>
             <td>Description</td>
         </tr>
         <tr *ngFor="let a of avisS">
             <td>{{a.idAvis}}</td>
-            <td>{{a.titre}}</td>  
+            <td>{{a.titre}}</td>
+            <td>{{a.idUtilisateur.nomUtilisateur }} {{ a.idUtilisateur.prenomUtilisateur }}</td>
             <td>{{a.description}}</td>
             <td><button (click)="deleteAvis(a.idAvis)">Delete</button></td>
         </tr>
     </table>
+    </div>
+</div>
 </div>

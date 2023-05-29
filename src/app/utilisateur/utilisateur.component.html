@@ -1,7 +1,9 @@
-<div>
-    <h1>Ajouter un utilisateur</h1>
-    <form (ngSubmit)="saveUtilisateur()">
-        <table>
+<div class="container">
+    <div class="left">
+        <div class="utilisateur-container">
+        <h1>Ajouter un utilisateur</h1>
+        <form (ngSubmit)="saveUtilisateur()">
+            <table>
             <tr>
                 <td>Nom</td>
                 <td><input type="text" [(ngModel)]="user.nomUtilisateur" name="nomUtilisateur"/></td>
@@ -25,11 +27,12 @@
             <tr>
                 <td colspan="2"><button>Ajouter</button></td>
             </tr>
-        </table>
-    </form>
-</div>
-
-<div>
+            </table>
+        </form>
+        </div>
+    </div>
+    <div class="right">
+    <div class="utilisateur-table">
     <table>
         <tr>
             <td>Nom</td>
@@ -48,5 +51,6 @@
             <td><button (click)="deleteUtilisateur(u.idUtilisateur)">Delete</button></td>
         </tr>
     </table>
-
+</div>
+</div>
 </div>
